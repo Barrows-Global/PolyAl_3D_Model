@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link type="text/css" href="./styles.css" rel="stylesheet" /> -->
     <style>
-      .model-container {
+      body {
         margin: 0;
         padding: 0;
         width: 100vw;
@@ -186,56 +186,55 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <div class="model-container">
-      <model-viewer
-        src="PolyAl_for site.glb"
-        poster="poster.webp"
-        camera-controls
-        ar-modes="scene-viewer webxr quick-look"
-        auto-rotate
+
+    <model-viewer
+      src="PolyAl_for site.glb"
+      poster="poster.webp"
+      camera-controls
+      ar-modes="scene-viewer webxr quick-look"
+      auto-rotate
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-1"
+        data-position="-0.08278578752385679m 16.879641993867068m -0.9337918758392326m"
+        data-normal="0m 0m 1m"
+        data-visibility-attribute="visible"
       >
-        <button
-          class="Hotspot"
-          slot="hotspot-1"
-          data-position="-0.08278578752385679m 16.879641993867068m -0.9337918758392326m"
-          data-normal="0m 0m 1m"
-          data-visibility-attribute="visible"
-        >
-          <div class="HotspotAnnotation">Adjustable Header</div></button
-        ><button
-          class="Hotspot"
-          slot="hotspot-2"
-          data-position="-1.2418600928245205m 9.235014179331735m 1.6460000276565563m"
-          data-normal="5.55111512312578e-17m 0m 1m"
-          data-visibility-attribute="visible"
-        >
-          <div class="HotspotAnnotation">Adjustable Shelving</div></button
-        ><button
-          class="Hotspot"
-          slot="hotspot-3"
-          data-position="-2.5542134661227482m 7.642076344331511m -0.3014592961490984m"
-          data-normal="-1m 0m -5.55111512312578e-17m"
-          data-visibility-attribute="visible"
-        >
-          <div class="HotspotAnnotation">Customisable Cladding</div></button
-        ><button
-          class="Hotspot"
-          slot="hotspot-4"
-          data-position="1.3218676839085037m 1.2690947186579358m -1.4570009708404543m"
-          data-normal="0m 0m -1m"
-          data-visibility-attribute="visible"
-        >
-          <div class="HotspotAnnotation">Poly Al Core</div>
-        </button>
-        <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">View in your space</button>
-        <div id="ar-prompt">
-          <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
-        </div>
-      </model-viewer>
-    </div>
+        <div class="HotspotAnnotation">Adjustable Header</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="-1.2418600928245205m 9.235014179331735m 1.6460000276565563m"
+        data-normal="5.55111512312578e-17m 0m 1m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Adjustable Shelving</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="-2.5542134661227482m 7.642076344331511m -0.3014592961490984m"
+        data-normal="-1m 0m -5.55111512312578e-17m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Customisable Cladding</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="1.3218676839085037m 1.2690947186579358m -1.4570009708404543m"
+        data-normal="0m 0m -1m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Poly Al Core</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+      </div>
+    </model-viewer>
 
     <script>
       const onProgress = (event) => {
